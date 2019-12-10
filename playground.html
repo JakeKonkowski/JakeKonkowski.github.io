@@ -1,23 +1,40 @@
 <!DOCTYPE HTML>
 <html>
-	<head th:insert="Data :: head">
-		<title>Home</title>
+	<head>
+		<title>Jake Konkowski</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link href="css/main.css" th:href="@{/css/main.css}" rel="stylesheet">
+		<link href="css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+		<link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/manifest.json">
 	</head>
-	<body>		
-		<div th:replace="HeaderFooter :: header"></div>
-		
+	<body>
+		<div id="header"></div>
+
 		<div class="row" style="padding-top: 10px;">
 			<div class="col-sm-4 text-center">
-				<button type="button" class="btn btn-primary">Button 1</button>
+				<button id="dogButton" type="button" class="btn btn-primary">Push me!</button>
 			</div>
 			<div class="col-sm-4 text-center">
-				<button type="button" class="btn btn-warning">Button 2</button>
-			</div>
-			<div class="col-sm-4 text-center">
-				<button type="button" class="btn btn-success">Button 3</button>
+				<img id="dogPic"></img>
 			</div>
 		</div>
+		<footer>
+	    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+			<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+			<script type="text/javascript" src="js/dogstuff.js"></script>
+
+			<script>
+				$(document).ready(function(){
+					$("#header").load("header.html");
+				});
+			</script>
+		</footer>
 	</body>
-	<footer th:include="Data :: footer">
-	</footer>
 </html>
